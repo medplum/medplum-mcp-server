@@ -1,0 +1,28 @@
+{
+  "name": "medplum-mcp-server",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Minimal MCP server for Medplum with Node.js and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@medplum/core": "4.1.8",
+    "@modelcontextprotocol/sdk": "1.12.3",
+    "cors": "2.8.5",
+    "dotenv": "16.5.0",
+    "express": "5.1.0",
+    "zod": "3.25.67"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.3",
+    "@types/node": "22.15.18",
+    "ts-node": "10.9.2",
+    "typescript": "5.8.3"
+  }
+}
