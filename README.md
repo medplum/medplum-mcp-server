@@ -25,6 +25,28 @@ By default, this MCP proxy server runs on port 8104. You can change the port by 
 PORT=5000
 ```
 
+## Run dev server
+
+To run the development server, use the following command:
+
+```bash
+npm run dev
+```
+
+## Run production server
+
+First, build the production server:
+
+```bash
+npm run build
+```
+
+Then, start the production server:
+
+```bash
+nohup node --max-old-space-size=8192 dist/main.js &
+```
+
 ## Testing with MCP Inspector
 
 Start the inspector:

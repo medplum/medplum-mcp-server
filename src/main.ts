@@ -37,6 +37,39 @@ app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to the Medplum MCP Server!");
+  res.setHeader("Content-Type", "text/html");
+  res.send(`
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Medplum MCP Server" />
+    <title>Medplum MCP Server</title>
+    <link rel="canonical" href="https://mcp.medplum.ai/" />
+    <style>
+      #container { max-width: 600px; margin: auto; }
+      h1, p { font-family: monospace; }
+      h1 { font-size: 24px; }
+      p { font-size: 12px; font-style: normal; line-height: 1.6; }
+      a { color: #00f; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Medplum MCP Server</h1>
+      <p>
+        This website hosts the Medplum <a href="https://modelcontextprotocol.org/">MCP server</a>
+        beta.
+      </p>
+      <p>
+        See <a href="https://www.medplum.com/">https://www.medplum.com/</a> for
+        more information.
+      </p>
+    </div>
+  </body>
+</html>
+`);
 });
 
 app.get(
