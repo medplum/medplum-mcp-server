@@ -64,17 +64,9 @@ server.tool(
     body: z.any(),
   },
   async ({ method, path, body }, extra) => {
-    console.log("CODY extra", extra);
     const baseFhirUrl = concatUrls(MEDPLUM_BASE_URL, "fhir/R4");
     const fhirUrl = concatUrls(baseFhirUrl, path);
     const accessToken = extra.authInfo?.token;
-    console.log("CODY Proxy request", {
-      baseUrl: MEDPLUM_BASE_URL,
-      accessToken,
-      fhirUrl,
-      method,
-      body,
-    });
     const proxy = new MedplumClient({
       baseUrl: MEDPLUM_BASE_URL,
       accessToken,
