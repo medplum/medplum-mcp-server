@@ -44,7 +44,7 @@ npm run build
 Then, start the production server:
 
 ```bash
-nohup node --max-old-space-size=8192 dist/main.js &
+nohup node --max-old-space-size=8192 dist/main.cjs &
 ```
 
 ## Testing with MCP Inspector
