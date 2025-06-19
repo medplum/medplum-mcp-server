@@ -35,8 +35,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
   res.status(500).json({ msg: "Internal Server Error" });
 });
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to the Medplum MCP Server!");
+app.get("/", (_req: Request, res: Response) => {
   res.setHeader("Content-Type", "text/html");
   res.send(`
 <!DOCTYPE html>
